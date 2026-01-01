@@ -23,8 +23,7 @@ $(document).ready(function () {
     speed: 0.3
   });
   siriWave.start();
-  });
-
+  
   // Animate siriwave 
    $('.siri-message').textillate({
         loop: true,
@@ -36,5 +35,16 @@ $(document).ready(function () {
         out:{
             effect: "fadeOutUp",
             sync: true,
-        },
+        }
+        });
+
+        // mic button event
+        $("#MicBtn").click(function () { 
+            eel.playAssistantSound();
+            $("#Oval").attr("hidden", true);
+            $("#SiriWave").attr("hidden", false);
+
+        });
+    
+
 });
